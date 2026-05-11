@@ -1,4 +1,4 @@
-package com.shoppingchart.javashoppingcart.model;
+package com.shoppingchart.JavaShoppingCart.model;
 
 import java.time.LocalDateTime;
 
@@ -13,16 +13,7 @@ import jakarta.persistence.JoinColumn;
 import java.util.List;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.CascadeType;
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ProductImage> images;
 
-    public List<ProductImage> getImages() {
-        return images;
-    }
-
-    public void setImages(List<ProductImage> images) {
-        this.images = images;
-    }
 
 @Entity
 public class Product {
@@ -85,7 +76,16 @@ public class Product {
     public void setModifiedBy(String modifiedBy) {
         this.modifiedBy = modifiedBy;
     }
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ProductImage> images;
 
+    public List<ProductImage> getImages() {
+        return images;
+    }
+
+    public void setImages(List<ProductImage> images) {
+        this.images = images;
+    }
     private double salePrice;
     private int stockQuantity;
     private LocalDateTime created;

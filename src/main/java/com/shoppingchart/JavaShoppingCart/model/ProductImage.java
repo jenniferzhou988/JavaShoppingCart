@@ -1,9 +1,7 @@
 package com.shoppingchart.JavaShoppingCart.model;
 
-// ...existing code...
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
-
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
