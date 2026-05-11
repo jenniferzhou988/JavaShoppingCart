@@ -1,4 +1,4 @@
-package com.shoppingchart.javashoppingcart.model;
+package com.shoppingchart.JavaShoppingCart.model;
 
 import java.time.LocalDateTime;
 
